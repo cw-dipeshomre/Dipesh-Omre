@@ -1,4 +1,5 @@
 function a(){
+    var t=78;
     console.log('Hello World');
 }
 var b=function (z){
@@ -8,7 +9,7 @@ var b=function (z){
 }
 a();
 b(()=>{
-    console.log('Hello from callback');
+    console.log('Hello from dsffscallbackhjjj');
 });
 // xyz(); 
 //error: xyz is not defined
