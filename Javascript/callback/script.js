@@ -8,7 +8,6 @@
 function f1(){
     let count=0;
     document.getElementsByClassName("btn")[0].addEventListener("click", function abc(){
-        // alert("Button clicked!");
         count++;
         console.log("Button clicked " + count + " times");
     });
