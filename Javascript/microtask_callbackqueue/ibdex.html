@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MutationObserver + Microtask Demo</title>
+</head>
+<body>
+
+  <h1>MutationObserver Demo</h1>
+
+  <script>
+    // 1️⃣ MutationObserver
+    const observer = new MutationObserver(() => {
+      console.log("MutationObserver");
+    });
+
+    observer.observe(document.body, {
+      childList: true
+    });
+
+    // 2️⃣ Promise (Microtask)
+    Promise.resolve().then(() => {
+      console.log("Promise");
+    });
+
+    // 3️⃣ setTimeout (Callback / Macrotask)
+    setTimeout(() => {
+      console.log("Timeout");
+    }, 0);
+
+    // 4️⃣ DOM Mutation
+    document.body.append("Hello");
+  </script>
+
+</body>
+</html>
